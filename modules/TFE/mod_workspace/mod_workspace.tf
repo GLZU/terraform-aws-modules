@@ -1,7 +1,7 @@
 locals {  
   params = var.params
 }
-
+/*
 resource "tfe_workspace" "ws" {
   name         = local.params.ws.tf_workspace_name
   organization = local.params.ws.tf_org
@@ -11,7 +11,7 @@ resource "tfe_workspace" "ws" {
 #     branch         = local.params.git.repo_name
      oauth_token_id =  local.params.ws.vcs_oauth_token_id
   }
-}
+}*/
 
 module "workspace" {
   count = length(local.params.ws.variables)
