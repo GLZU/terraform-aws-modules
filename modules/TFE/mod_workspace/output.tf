@@ -1,6 +1,6 @@
 # Output variables
 output om_workspace {
-  value =  module.ws
+  value =  tfe_workspace.ws
 }
   
 output om_variables {
