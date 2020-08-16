@@ -1,6 +1,6 @@
 # Output variables
 output om_workspace {
-  value =  module.workspace
+  value =  module.ws
 }
   
 output om_variables {
