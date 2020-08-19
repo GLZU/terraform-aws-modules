@@ -3,9 +3,10 @@ locals {
 }
 
 resource "tfe_workspace" "ws" {
-  name         = local.params.ws.tf_workspace_name
-  organization = local.params.ws.tf_org
-   working_directory  =     local.params.ws.git_path 
+  name                = local.params.ws.tf_workspace_name
+  organization        = local.params.ws.tf_org
+  working_directory   = local.params.ws.git_path 
+  auto_apply          = lookup(local.params.ws, "auto_apply", false) 
   vcs_repo {
      identifier     = "${local.params.git.target_git_org}/${local.params.git.target_repo_name}"
 #     branch         = local.params.git.repo_name
